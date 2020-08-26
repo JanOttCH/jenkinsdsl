@@ -1,5 +1,7 @@
 jenkins.model.Jenkins.theInstance.getProjects().each { job ->
-    if (!job.name.contains('deleteJob')) {
+    if (   !job.name.contains('deletejob')
+        && !job.name.contains('deleteview')
+       ) {
         println job.name
         job.delete()
     }
