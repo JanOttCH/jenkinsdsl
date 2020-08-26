@@ -1,6 +1,7 @@
 jenkins.model.Jenkins.theInstance.getProjects().each { job ->
     if (   !job.name.contains('deletejob')
         && !job.name.contains('deleteview')
+        && !job.name.contains('bootstrap')
        ) {
         println job.name
         job.delete()
